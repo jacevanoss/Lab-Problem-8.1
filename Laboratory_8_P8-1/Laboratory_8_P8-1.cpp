@@ -13,23 +13,23 @@ using namespace std;
 int countVowel(string str);
 
 int main() {
-	string test = "hEllo";
+	string test = "test";
 	cout << countVowel(test);
 
 	return 0;
 }
 
 int countVowel(string str) {
-	int count = 0;
-	for (int i = 0; i < str.length(); i++) {
-		int num1 = i;
-		int num2 = 1;
-		str.substr(num1, num2);
-		if (str.substr(num1, num2) == "a" || str.substr(num1, num2) == "e" || str.substr(num1, num2) == "i" || str.substr(num1, num2) == "o" || str.substr(num1, num2) == "u") {
-			count++;
+	int count = 0; 
+	for (int i = 0; i < str.length(); i++) { 
+		int num1 = i; 
+		int num2 = 1; 
+		str.substr(num1, num2); 
+		if (str.substr(num1, num2) == "a" || str.substr(num1, num2) == "e" || str.substr(num1, num2) == "i" || str.substr(num1, num2) == "o" || str.substr(num1, num2) == "u") { 
+			count++; 
 		}
-		else if (str.substr(num1, num2) == "A" || str.substr(num1, num2) == "E" || str.substr(num1, num2) == "I" || str.substr(num1, num2) == "O" || str.substr(num1, num2) == "U") {
-			count++;
+		else if (str.substr(num1, num2) == "A" || str.substr(num1, num2) == "E" || str.substr(num1, num2) == "I" || str.substr(num1, num2) == "O" || str.substr(num1, num2) == "U") { 
+			count++; 
 		}
 		num1++;
 		num2++;
