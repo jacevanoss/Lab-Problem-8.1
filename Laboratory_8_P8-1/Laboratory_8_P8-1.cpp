@@ -10,15 +10,29 @@
 
 using namespace std;
 
-int countCharacter(string str);
+int countVowel(string str);
 
 int main() {
-	string test = "test";
-	cout << countCharacter(test);
+	string test = "hEllo";
+	cout << countVowel(test);
 
 	return 0;
 }
 
-int countCharacter(string str) {
-	return str.length();
+int countVowel(string str) {
+	int count = 0;
+	for (int i = 0; i < str.length(); i++) {
+		int num1 = i;
+		int num2 = 1;
+		str.substr(num1, num2);
+		if (str.substr(num1, num2) == "a" || str.substr(num1, num2) == "e" || str.substr(num1, num2) == "i" || str.substr(num1, num2) == "o" || str.substr(num1, num2) == "u") {
+			count++;
+		}
+		else if (str.substr(num1, num2) == "A" || str.substr(num1, num2) == "E" || str.substr(num1, num2) == "I" || str.substr(num1, num2) == "O" || str.substr(num1, num2) == "U") {
+			count++;
+		}
+		num1++;
+		num2++;
+	}
+	return count;
 }
